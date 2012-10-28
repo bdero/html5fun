@@ -3,7 +3,7 @@
  * @source: https://github.com/CheeseKeg/html5fun/blob/master/projects/pointertrail/pointerTrail.js
  *
  * @licstart  The following is the entire license notice for the 
- *  JavaScript code in this page.
+ *  JavaScript code in this file.
  *
  * Copyright (C) 2012  Brandon T. DeRosier
  *
@@ -23,7 +23,7 @@
  * through which recipients can access the Corresponding Source.
  *
  * @licend  The above is the entire license notice
- * for the JavaScript code in this page.
+ * for the JavaScript code in this file.
  *
  */
 
