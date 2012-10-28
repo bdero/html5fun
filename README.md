@@ -23,6 +23,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with these programs.  If not, see <http://www.gnu.org/licenses/>.
 
+Setup
+-----------------------------------
+1. Clone the repository: `git clone https://github.com/CheeseKeg/html5fun.git`
+2. Navigate to the newly cloned repository's directory: `cd html5fun`
+3. Initialize local submodule configuration: `git submodule init`
+4. Fetch jsGameSoup: `git submodule update`
+
 How to run/how it's organized
 -----------------------------------
 Each project has its own directory, complete with an index.html file, javascript file(s), and any required resources for that particular project. Simply navigate to a project's directory using a browser to run it.
