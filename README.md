@@ -4,7 +4,7 @@ github.com/CheeseKeg/html5fun
 
 Purpose
 -----------------------------------
-I was thinking about developing a small entity management system to be licensed under GNU GPLv3 for making free (as in freedom) html5 games. I soon stumbled across jsGameSoup, realizing that this had already been done (and quite well at that!)
+I was thinking about developing a small entity management system to be licensed under GNU GPLv3 for making free (as in freedom) html5 games. I soon stumbled across jsGameSoup, realizing that, while it's only under a 'weak' copyleft free software license (LGPLv3), this had already been done (and quite well at that!)
 
 Eager to give it a try, this repository is my jsGameSoup playground.
 
