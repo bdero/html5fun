@@ -176,7 +176,19 @@ function Score(gs, priority) {
     }
 }
 
+function EndText(gs, priority, text) {
+    this.priority = priority;
+
+    this.draw = function(c) {
+        c.strokeStyle = "#999";
+        c.font = "40px san-serif";
+        c.textBaseline = "middle";
+        c.strokeText(text, gs.width/2 - 250, gs.height/2);
+    }
+}
+
 function World(gs) {
+    this.state;
     this.score;
     this.middle;
     this.player;
@@ -186,6 +198,7 @@ function World(gs) {
     this.maxDistance;
 
     this.init = function() {
+        this.state = 0;
         this.score = gs.addEntity(new Score(gs, 3));
         this.middle = gs.addEntity(new Middle(gs, 2, [gs.width/2, gs.height/2], 10));
         this.player = gs.addEntity(new Player(gs, 1, this, 10));
@@ -201,8 +214,15 @@ function World(gs) {
     }
 
     this.update = function() {
-        // Game restart
-        if (this.middle.radius < 1 || this.player.radius < 1) {
+        if (this.state == 0) {
+            if (this.middle.radius < 1) {
+                this.state = 1;
+                gs.addEntity(new EndText(gs, 4, "The center was absorbed"));
+            } else if (this.player.radius < 1) {
+                this.state = 2;
+                gs.addEntity(new EndText(gs, 4, "You have been absorbed"));
+            }
+        } else if (gs.pointerDown) {
             restartGame(gs);
         }
 
